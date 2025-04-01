@@ -14,6 +14,7 @@ The **SPFx Weather Info Web Part** is a SharePoint Framework (SPFx) solution tha
 Before running the project, ensure you have the following installed:
 - Node.js (LTS recommended)
 - Yeoman and SPFx generator
+- Gulp (Run the Webpart)
 - SharePoint Online or a development environment
 
 ## Installation
@@ -21,8 +22,8 @@ Follow these steps to set up and run the project:
 
 1. **Clone the repository:**
    ```sh
-   git clone <repository-url>
-   cd spfx-weather-info
+   git clone https://github.com/Sunny-jain/Weather-App-SPFX.git
+   Open the folder
    ```
 
 2. **Install dependencies:**
@@ -30,16 +31,16 @@ Follow these steps to set up and run the project:
    npm install
    ```
 
-3. **Update the configuration:**
-   - Open `src/webparts/weatherInfo/components/IWeatherInfoProps.ts` and update the API key and default location if needed.
-   - Alternatively, configure these values in the property pane in SharePoint.
-
 4. **Run the development server:**
    ```sh
+   gulp trust-dev-cert
    gulp serve
    ```
 
    This will open the local workbench where you can test the web part.
+   ```sh
+   https://{tenantDomain}/_layouts/workbench.aspx
+   ```
 
 ## Deployment
 To deploy the web part to SharePoint:
