@@ -1,0 +1,56 @@
+@import "~@fluentui/react/dist/sass/References.scss";
+
+.weatherInfo {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures all child elements, including the Card, are centered */
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(
+      --link
+    ); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(
+        --linkHovered
+      ); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
